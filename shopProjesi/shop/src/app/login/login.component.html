@@ -1,0 +1,20 @@
+<form #loginForm ="ngForm" (ngSubmit) ="login()" class ="form-signin">
+    <div class ="text-center mb-4">
+        <h1 class ="h3 mb-3 fw-normal"> Sisteme Giriş </h1>
+    </div>
+    <div class ="form-label-group" >
+        <input type ="text" [(ngModel)]= "loginData.identifier" name ="identifier"
+        class ="form-control" placeholder="Email" >
+    </div>
+
+    <div class ="form-label-group" >
+        <input type ="password" [(ngModel)]= "loginData.password" name ="password"
+        class ="form-control" placeholder="Şifre" >
+    </div>
+
+    <button class ="w-100 btn  btn-lg btn-primary" type="submit" >Giriş</button>
+    <a class="w-100 btn btn-secondary btn-lg btn-block" routerLink="/app-sign-in" >
+        Kayıt Ol
+    </a>
+    <p class = "mt-5 mb-3 text-muted"> &copy; 2021-2022 </p>
+</form>
